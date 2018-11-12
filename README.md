@@ -1,36 +1,34 @@
 # Craco Less Plugin
 
+This is a plugin that adds Less support to [create-react-app](https://facebook.github.io/create-react-app/) via [craco](https://github.com/sharegate/craco).
+
 ### Installation
 
-Yarn:
+First, follow the [`craco` Installation Instructions](https://github.com/sharegate/craco/blob/master/packages/craco/README.md##installation) to install the `craco` package, create a `craco.config.js` file, and modify the scripts in your `package.json`.
+
+Then install `craco-less`:
 
 ```bash
 $ yarn add -D craco-less
-```
 
-NPM:
+# Or
 
-```bash
-$ npm i –save-dev craco-less
+$ npm i --save-dev craco-less
 ```
 
 ### Usage
 
-In your `craco.config.js`:
+Here is a complete `craco.config.js` configuration file that adds Less compilation to `create-react-app`:
 
 ```js
 const CracoLessPlugin = require("craco-less");
 
 module.exports = {
-  plugins: [
-    {
-      plugin: CracoLessPlugin
-    }
-  ]
+  plugins: [{ plugin: CracoLessPlugin }]
 };
 ```
 
-To configure some `less-loader` options:
+To configure the `less-loader` options:
 
 ```js
 const CracoLessPlugin = require("craco-less");
@@ -52,4 +50,6 @@ module.exports = {
 };
 ```
 
-[View the less-loader Documentation](https://github.com/webpack-contrib/less-loader)
+This example uses the `modifyVars` option to customize the [Ant Design](https://ant.design/) theme. Read the [Ant Design documentation](https://ant.design/docs/react/customize-theme#How-to-do-it) for more information.
+
+[View the less-loader Documentation](https://github.com/webpack-contrib/less-loader).

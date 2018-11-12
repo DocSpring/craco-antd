@@ -1,6 +1,6 @@
 {
   "name": "craco-less",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Less plugin for craco / react-scripts / create-react-app ",
   "main": "lib/craco-less.js",
   "scripts": {
@@ -23,6 +23,8 @@
   "devDependencies": {},
   "dependencies": {
     "@craco/craco": ">= 2.2.3",
-    "react-scripts": ">= 2.1.1"
+    "react-scripts": ">= 2.1.1",
+    "less": ">= 3.8.1",
+    "less-loader": ">= 4.1.0"
   }
 }
