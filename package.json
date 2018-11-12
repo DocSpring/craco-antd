@@ -1,31 +1,28 @@
 {
-  "name": "craco-less",
-  "version": "1.0.3",
-  "description": "A Less plugin for craco / react-scripts / create-react-app ",
-  "main": "lib/craco-less.js",
+  "name": "craco-antd",
+  "version": "1.0.0",
+  "description": "A craco plugin to use Ant Design with create-react-app ",
+  "main": "lib/craco-antd.js",
   "scripts": {
     "test": "jscs lib/*.js test/*.js && jshint lib/*.js && mocha --reporter=spec test/*-test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ndbroadbent/craco-less.git"
+    "url": "git+ssh://git@github.com/ndbroadbent/craco-antd.git"
   },
   "keywords": [
     "craco",
-    "create-react-app"
+    "create-react-app",
+    "Ant Design"
   ],
   "author": "Nathan Broadbent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ndbroadbent/craco-less/issues"
+    "url": "https://github.com/ndbroadbent/craco-antd/issues"
   },
-  "homepage": "https://github.com/ndbroadbent/craco-less#readme",
+  "homepage": "https://github.com/ndbroadbent/craco-antd#readme",
   "devDependencies": {},
   "dependencies": {
-    "@craco/craco": ">= 2.2.3",
-    "react-scripts": ">= 2.1.1",
-    "less": ">= 3.8.1",
-    "less-loader": ">= 4.1.0",
-    "webpack": ">= 4.19.1"
+    "craco-less": ">= 1.0.3"
   }
 }
