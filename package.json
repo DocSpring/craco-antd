@@ -1,0 +1,28 @@
+{
+  "name": "craco-less",
+  "version": "1.0.1",
+  "description": "A Less plugin for craco / react-scripts / create-react-app ",
+  "main": "lib/craco-less.js",
+  "scripts": {
+    "test": "jscs lib/*.js test/*.js && jshint lib/*.js && mocha --reporter=spec test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ndbroadbent/craco-less.git"
+  },
+  "keywords": [
+    "craco",
+    "create-react-app"
+  ],
+  "author": "Nathan Broadbent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndbroadbent/craco-less/issues"
+  },
+  "homepage": "https://github.com/ndbroadbent/craco-less#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@craco/craco": ">= 2.2.3",
+    "react-scripts": ">= 2.1.1"
+  }
+}

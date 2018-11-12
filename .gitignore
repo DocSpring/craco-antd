@@ -1,0 +1,14 @@
+/.cache
+/node_modules
+*.log
+/errors
+/test.js
+/test.ts
+/test.css
+/.vscode
+/dist
+.DS_Store
+coverage
+.idea
+package-lock.json
+/test-results
