@@ -4,7 +4,7 @@
   "description": "A craco plugin to use Ant Design with create-react-app ",
   "main": "lib/craco-antd.js",
   "scripts": {
-    "test": "jscs lib/*.js test/*.js && jshint lib/*.js && mocha --reporter=spec test/*-test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,10 @@
     "url": "https://github.com/ndbroadbent/craco-antd/issues"
   },
   "homepage": "https://github.com/ndbroadbent/craco-antd#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "clone": "^2.1.2",
+    "jest": "^23.6.0"
+  },
   "dependencies": {
     "craco-less": ">= 1.0.3"
   }

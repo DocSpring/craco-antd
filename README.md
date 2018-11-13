@@ -4,6 +4,7 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 - Less (provided by [craco-less](https://github.com/ndbroadbent/craco-less))
 - `babel-plugin-import` to only import the required CSS, instead of everything
+- A nicer way to customize the theme. Save your modified variables in `antd.customize.json`
 
 ### Installation
 
@@ -38,7 +39,17 @@ Ant Design also allows you to customize the theme by modifying the Less variable
 
 > View Ant Design's ["Customize Theme" documentation](https://ant.design/docs/react/customize-theme)
 
-Customize the theme with the `customizeTheme` option:
+`craco-antd` will look for a `antd.customize.json` file in the root directory of your project. If this file is found, the contents will be merged into the `modifyVars` option for `less-loader`. For example:
+
+```json
+{
+  "@primary-color": "#1DA57A",
+  "@link-color": "#1DA57A",
+  "@border-radius-base": "2px"
+}
+```
+
+You can also customize these variables in `craco.config.js` with the `customizeTheme` option:
 
 ```js
 const CracoAntDesignPlugin = require("craco-antd");
@@ -59,9 +70,36 @@ module.exports = {
 };
 ```
 
-> (`customizeTheme` is just a nicer name for the `modifyVars` option in `less-loader`.)
+> (`customizeTheme` is just an alias for the `modifyVars` option in `less-loader`.)
 
-> If you need to pass any additional options to `less-loader`, you can pass these in a `lessLoaderOptions` object.
+Finally, you can pass a `lessLoaderOptions` option if you want full control over the `less-loader` options:
+
+```js
+module.exports = {
+  plugins: [
+    {
+      plugin: CracoAntDesignPlugin,
+      options: {
+        lessLoaderOptions: {
+          modifyVars: { "@primary-color": "#1DA57A" },
+          strictMath: true,
+          noIeCompat: true
+        }
+      }
+    }
+  ]
+};
+```
+
+> [View the less-loader Documentation](https://webpack.js.org/loaders/less-loader/).
+
+If you use all of these options at the same time, they are merged together in the following order:
+
+- `antd.customize.json`
+- `options.customizeTheme`
+- `options.lessLoaderOptions.modifyVars`
+
+---
 
 That's it! Now you can customize the Ant Design theme, and you can also compile Less files in your own app.
 
