@@ -16,11 +16,11 @@ Then, follow the [`craco` Installation Instructions](https://github.com/sharegat
 Then install `craco-antd`:
 
 ```bash
-$ yarn add -D craco-antd
+$ yarn add craco-antd
 
 # Or
 
-$ npm i --save-dev craco-antd
+$ npm i -S craco-antd
 ```
 
 ### Usage
@@ -72,7 +72,7 @@ module.exports = {
 
 > (`customizeTheme` is just an alias for the `modifyVars` option in `less-loader`.)
 
-Finally, you can pass a `lessLoaderOptions` option if you want full control over the `less-loader` options:
+Finally, you can pass a `lessLoaderOptions` object if you want full control over the `less-loader` options:
 
 ```js
 module.exports = {
@@ -93,7 +93,7 @@ module.exports = {
 
 > [View the less-loader Documentation](https://webpack.js.org/loaders/less-loader/).
 
-If you use all of these options at the same time, they are merged together in the following order:
+If you use more than one of these options to customize the theme, they are merged together in the following order:
 
 - `antd.customize.json`
 - `options.customizeTheme`
