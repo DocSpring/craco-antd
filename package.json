@@ -23,6 +23,7 @@
   "homepage": "https://github.com/FormAPI/craco-antd#readme",
   "devDependencies": {
     "clone": "^2.1.2",
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0"
   },
   "dependencies": {
