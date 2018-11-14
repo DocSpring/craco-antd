@@ -33,7 +33,7 @@ Then install `craco-antd`:
 ```bash
 $ yarn add craco-antd
 
-# Or
+# OR
 
 $ npm i -S craco-antd
 ```
@@ -118,5 +118,40 @@ If you use more than one of these options to customize the theme, they are merge
 
 That's it! Now you can customize the Ant Design theme, and you can also compile Less files in your own app.
 
+## Further Configuration
+
 If you need to configure anything else for the webpack build, take a look at the
 [Configuration Overview section in the `craco` README](https://github.com/sharegate/craco/blob/master/packages/craco/README.md#configuration-overview). You can use `CracoAntDesignPlugin` while making other changes to `babel` and `webpack`, etc.
+
+## Contributing
+
+Install dependencies:
+
+```bash
+$ yarn install
+
+# OR
+
+$ npm install
+```
+
+Run tests:
+
+```
+$ yarn test
+```
+
+Before submitting a pull request, please check the following:
+
+- All tests are passing
+  - Run `yarn test`
+- 100% test coverage
+  - Coverage will be printed after running tests.
+  - Open the coverage results in your browser: `$ open coverage/lcov-report/index.html`
+- All code is formatted with [Prettier](https://prettier.io/)
+  - Run `prettier --write **/*.js`
+  - If you use VS Code, I recommend enabling the `formatOnSave` option.
+
+## License
+
+[MIT](./LICENSE)
