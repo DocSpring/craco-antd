@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ndbroadbent/craco-antd.git"
+    "url": "git+ssh://git@github.com/FormAPI/craco-antd.git"
   },
   "keywords": [
     "craco",
     "create-react-app",
     "Ant Design"
   ],
-  "author": "Nathan Broadbent",
+  "author": "Nathan Broadbent <nathan@formapi.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ndbroadbent/craco-antd/issues"
+    "url": "https://github.com/FormAPI/craco-antd/issues"
   },
-  "homepage": "https://github.com/ndbroadbent/craco-antd#readme",
+  "homepage": "https://github.com/FormAPI/craco-antd#readme",
   "devDependencies": {
     "clone": "^2.1.2",
     "jest": "^23.6.0"
