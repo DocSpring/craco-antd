@@ -3,11 +3,22 @@
 
 # Craco Ant Design Plugin
 
-This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy to use the [Ant Design](https://ant.design/) UI library with [create-react-app](https://facebook.github.io/create-react-app/) version >= 2. This includes:
+This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy to use the [Ant Design](https://ant.design/) UI library with [create-react-app](https://facebook.github.io/create-react-app/) version >= 2.
+
+> Use [react-app-rewired](https://github.com/timarney/react-app-rewired) for `create-react-app` version 1.
+
+`craco-antd` includes:
 
 - Less (provided by [craco-less](https://github.com/FormAPI/craco-less))
 - `babel-plugin-import` to only import the required CSS, instead of everything
 - A nicer way to customize the theme. Save your modified variables in `antd.customize.json`
+
+### Supported Versions
+
+`craco-antd` is tested with:
+
+- `react-scripts`: `^2.1.1`
+- `@craco/craco`: `^2.2.3`
 
 ### Installation
 
