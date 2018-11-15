@@ -14,14 +14,14 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 - `babel-plugin-import` to only import the required CSS, instead of everything
 - A nicer way to customize the theme. Save your modified variables in `antd.customize.json`
 
-### Supported Versions
+## Supported Versions
 
 `craco-antd` is tested with:
 
 - `react-scripts`: `^2.1.1`
 - `@craco/craco`: `^2.4.0`
 
-### Installation
+## Installation
 
 First, follow the beginning of the [Ant Design `create-react-app` Documentation](https://ant.design/docs/react/use-with-create-react-app) to set up your app with Ant Design.
 (Stop before the "Advanced Guides" section, because this plugin handles all of that for you.)
@@ -38,7 +38,7 @@ $ yarn add craco-antd
 $ npm i -S craco-antd
 ```
 
-### Usage
+## Usage
 
 Here is a complete `craco.config.js` configuration file that sets up Less compilation and `babel-plugin-import` for `create-react-app`:
 
@@ -49,6 +49,8 @@ module.exports = {
   plugins: [{ plugin: CracoAntDesignPlugin }]
 };
 ```
+
+## Customize Ant Design Theme
 
 Ant Design also allows you to customize the theme by modifying the Less variables.
 
@@ -87,7 +89,26 @@ module.exports = {
 
 > (`customizeTheme` is just an alias for the `modifyVars` option in `less-loader`.)
 
-Finally, you can pass a `lessLoaderOptions` object if you want full control over the `less-loader` options:
+If you use multiple options to customize the theme variables, they are merged together in the following order:
+
+- `antd.customize.json`
+- `options.customizeTheme`
+- `options.lessLoaderOptions.modifyVars`
+
+## Loader Options
+
+You can pass some options to configure `style-loader`, `css-loader`, and `less-loader`:
+
+- `options.styleLoaderOptions`
+  - [View the `style-loader` options](https://webpack.js.org/loaders/style-loader/#options)
+- `options.cssLoaderOptions`
+  - [View the `css-loader` options](https://webpack.js.org/loaders/css-loader/#options)
+- `options.lessLoaderOptions`
+  - [View the `less-loader` documentation](https://webpack.js.org/loaders/less-loader/)
+  - [View the Less options](http://lesscss.org/usage/#less-options)
+    - You must use "camelCase" instead of "dash-case", e.g. `--source-map` => `sourceMap`
+
+Example:
 
 ```js
 module.exports = {
@@ -99,20 +120,16 @@ module.exports = {
           modifyVars: { "@primary-color": "#1DA57A" },
           strictMath: true,
           noIeCompat: true
+        },
+        cssLoaderOptions: {
+          modules: true,
+          localIdentName: "[local]_[hash:base64:5]"
         }
       }
     }
   ]
 };
 ```
-
-> [View the less-loader Documentation](https://webpack.js.org/loaders/less-loader/).
-
-If you use more than one of these options to customize the theme, they are merged together in the following order:
-
-- `antd.customize.json`
-- `options.customizeTheme`
-- `options.lessLoaderOptions.modifyVars`
 
 ---
 
