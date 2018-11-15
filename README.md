@@ -131,10 +131,6 @@ module.exports = {
 };
 ```
 
----
-
-That's it! Now you can customize the Ant Design theme, and you can also compile Less files in your own app.
-
 ## Large Bundle Size from Ant Design Icons
 
 You can use the [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) plugin to see a breakdown of all the JS and CSS in your webpack build. Here's how to add this plugin to your `craco.config.js` configuration file:
