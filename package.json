@@ -1,6 +1,6 @@
 {
   "name": "craco-antd",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A craco plugin to use Ant Design with create-react-app ",
   "main": "lib/craco-antd.js",
   "scripts": {
