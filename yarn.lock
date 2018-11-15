@@ -821,10 +821,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@craco/craco@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-2.2.3.tgz#aa91eb3fca2c7f8228e6c9e5bb48ffe6325764af"
-  integrity sha512-sdcxGwvPBmYb8x2GqgffWq6Dci2+MSDRFzAH0kaujXSuqTvLVherreiiYuIgqkgTTYOBieDBZ433mk4U7mW6gQ==
+"@craco/craco@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-2.4.0.tgz#9ff31d00d88a2fffc7f87a812c03b1e257e64fa1"
+  integrity sha512-Zb1qAfBK23SisnW4ksoevztxNyRBRzox8pnJixvpfwBLgb2PJMeDEr3hztA3eXnLnSWH7JTcOcV3E1GrhhJorQ==
   dependencies:
     cross-spawn "6.0.5"
     lodash.mergewith "4.6.1"
@@ -2598,12 +2598,12 @@ coveralls@^3.0.2:
     minimist "^1.2.0"
     request "^2.85.0"
 
-craco-less@^1.0.4:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.0.5.tgz#a146bcf9eca8bef18a299c574a16c3a0d473343d"
-  integrity sha512-1Q7ExEr8Aa2EWUj7dJpEH07gmw7Q3HbREYO2TY+OUYIO2VnAoObihHEhNk5z0jyFqBo1S7L9jCHLjpZDdYcu3g==
+craco-less@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.2.0.tgz#32ae617f720c9ef8a24e2fad1decd583d5913c20"
+  integrity sha512-yuTqCasYYE5kE8QR1auOIx1AkHGfhYjVaF4dvgxTyCd3q+qUFN51JsHKHd8nCUecKkBpg3Da8U7f3A9wBgaWMw==
   dependencies:
-    "@craco/craco" "^2.2.3"
+    "@craco/craco" "^2.4.0"
     css-loader "^1.0.1"
     less "^3.8.1"
     less-loader "^4.1.0"
