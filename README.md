@@ -87,7 +87,7 @@ module.exports = {
 };
 ```
 
-> (`customizeTheme` is just an alias for the `modifyVars` option in `less-loader`.)
+> `customizeTheme` is just an alias for the `modifyVars` option in `less-loader`.
 
 If you use multiple options to customize the theme variables, they are merged together in the following order:
 
