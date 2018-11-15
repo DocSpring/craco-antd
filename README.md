@@ -19,7 +19,7 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 `craco-antd` is tested with:
 
 - `react-scripts`: `^2.1.1`
-- `@craco/craco`: `^2.2.3`
+- `@craco/craco`: `^2.4.0`
 
 ### Installation
 
