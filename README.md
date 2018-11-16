@@ -52,21 +52,19 @@ module.exports = {
 
 ## Customize Ant Design Theme
 
-Ant Design also allows you to customize the theme by modifying the Less variables.
+Ant Design allows you to customize the theme by modifying the Less variables.
 
-> View Ant Design's ["Customize Theme" documentation](https://ant.design/docs/react/customize-theme)
+`craco-antd` will look for custom variables in a Less file at `./antd.customize.less`. (You can customize this file path with the `customizeThemeLessPath` option.)
 
-`craco-antd` will look for a `antd.customize.json` file in the root directory of your project. If this file is found, the contents will be merged into the `modifyVars` option for `less-loader`. For example:
-
-```json
-{
-  "@primary-color": "#1DA57A",
-  "@link-color": "#1DA57A",
-  "@border-radius-base": "2px"
-}
+```less
+// ./antd.customize.less
+@primary-color: #1da57a;
+@link-color: #1da57a;
 ```
 
-You can also customize these variables in `craco.config.js` with the `customizeTheme` option:
+> [Here's a list of all the variables that can be modified.](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
+
+You can also customize these variables directly in your `craco.config.js` with the `customizeTheme` option:
 
 ```js
 const CracoAntDesignPlugin = require("craco-antd");
@@ -78,8 +76,7 @@ module.exports = {
       options: {
         customizeTheme: {
           "@primary-color": "#1DA57A",
-          "@link-color": "#1DA57A",
-          "@border-radius-base": "2px"
+          "@link-color": "#1DA57A"
         }
       }
     }
@@ -91,9 +88,11 @@ module.exports = {
 
 If you use multiple options to customize the theme variables, they are merged together in the following order:
 
-- `antd.customize.json`
+- The file at `options.customizeThemeLessPath` (default: `./antd.customize.less`)
 - `options.customizeTheme`
 - `options.lessLoaderOptions.modifyVars`
+
+> For more information, see Ant Design's ["Customize Theme" documentation](https://ant.design/docs/react/customize-theme).
 
 ## Loader Options
 
