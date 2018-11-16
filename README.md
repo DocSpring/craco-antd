@@ -52,9 +52,9 @@ module.exports = {
 
 ## Customize Ant Design Theme
 
-Ant Design allows you to customize the theme by modifying the Less variables.
+You can modify the default Ant Design theme by changing some Less variables.
 
-`craco-antd` will look for custom variables in a Less file at `./antd.customize.less`. (You can customize this file path with the `customizeThemeLessPath` option.)
+`craco-antd` will look for variables in a Less file at `./antd.customize.less`. (You can customize this file path with the `customizeThemeLessPath` option.)
 
 ```less
 // ./antd.customize.less
