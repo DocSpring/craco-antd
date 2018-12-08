@@ -12,7 +12,7 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 - Less (provided by [craco-less](https://github.com/FormAPI/craco-less))
 - `babel-plugin-import` to only import the required CSS, instead of everything
-- A nicer way to customize the theme. Save your modified variables in `antd.customize.json`
+- An easy way to customize the theme. Set your custom variables in `./antd.customize.less`
 
 ## Supported Versions
 
@@ -52,16 +52,19 @@ module.exports = {
 
 ## Production-Ready Config
 
-Here is a `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer) for development builds.
-It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (It's faster, smaller, and works fine with Ant Design.)
+Here is a `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
+It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
 
-I put my custom theme variables in a `src/style/AntDesign` folder, as well as some custom components and other Less files.
+I put my custom theme variables in `src/style/AntDesign/customTheme.less`. I also use that folder for some custom components and other CSS.
 
 ```javascript
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const WebpackBar = require("webpackbar");
 const CracoAntDesignPlugin = require("craco-antd");
 const path = require("path");
+
+// Don't open the browser during development
+process.env.BROWSER = "none";
 
 module.exports = {
   webpack: {
@@ -86,6 +89,8 @@ module.exports = {
   ]
 };
 ```
+
+> See the [Reload Custom Variables During Development](#reload-custom-variables-during-development) section to wrap your "start" script with [`nodemon`](https://github.com/remy/nodemon).
 
 ## Customize Ant Design Theme
 
@@ -130,6 +135,61 @@ If you use multiple options to customize the theme variables, they are merged to
 - `options.lessLoaderOptions.modifyVars`
 
 > For more information, see Ant Design's ["Customize Theme" documentation](https://ant.design/docs/react/customize-theme).
+
+## Reload Custom Variables During Development
+
+The webpack dev server needs to be restarted whenever you make a change to your custom theme variables. (It's not possible to reload this file automatically, because the variables are set in the webpack config. [I tried to fix this issue but hit a dead-end.](https://github.com/webpack-contrib/less-loader/pull/230#issuecomment-445466520))
+
+However, you can automatically restart webpack by wrapping `craco start` with [`nodemon`](https://github.com/remy/nodemon).
+
+Install `nodemon`:
+
+```bash
+yarn add -D nodemon
+
+# Or globally (not recommended):
+
+npm install -g nodemon
+```
+
+Update the "start" script in `package.json`:
+
+```json
+"scripts": {
+  "start": "nodemon -w ./antd.customize.less --exec 'craco start'",
+}
+```
+
+> (Change `./antd.customize.less` if you are using a different file.)
+
+The webpack dev server will now be restarted whenever you make a change to `./antd.customize.less`.
+
+#### Restart Webpack When `craco.config.js` Changes
+
+While you're here, you can also add `-w craco.config.js` to restart webpack whenever your `craco` configuration changes (`craco` doesn't do this automatically):
+
+```json
+"scripts": {
+  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec 'craco start'",
+}
+```
+
+## Disable "Open In Browser"
+
+By default, `create-react-app` will open a new browser tab every time it starts. This can be really annoying, especially if you set up the `nodemon` watcher. You can [disable this behavior with an environment variable: `BROWSER=none`](https://facebook.github.io/create-react-app/docs/advanced-configuration).
+
+You can set this in an `.env` file:
+
+```bash
+BROWSER=none
+```
+
+I prefer to set it at the top of `craco.config.js`:
+
+```javascript
+// Don't open the browser during development
+process.env.BROWSER = "none";
+```
 
 ## Options
 
