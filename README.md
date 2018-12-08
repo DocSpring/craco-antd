@@ -38,7 +38,7 @@ $ yarn add craco-antd
 $ npm i -S craco-antd
 ```
 
-## Usage
+## Basic Usage
 
 Here is a complete `craco.config.js` configuration file that sets up Less compilation and `babel-plugin-import` for `create-react-app`:
 
@@ -47,6 +47,43 @@ const CracoAntDesignPlugin = require("craco-antd");
 
 module.exports = {
   plugins: [{ plugin: CracoAntDesignPlugin }]
+};
+```
+
+## Production-Ready Config
+
+Here is a `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer) for development builds.
+It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (It's faster, smaller, and works fine with Ant Design.)
+
+I put my custom theme variables in a `src/style/AntDesign` folder, as well as some custom components and other Less files.
+
+```javascript
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const WebpackBar = require("webpackbar");
+const CracoAntDesignPlugin = require("craco-antd");
+const path = require("path");
+
+module.exports = {
+  webpack: {
+    plugins: [
+      new WebpackBar({ profile: true }),
+      ...(process.env.NODE_ENV === "development"
+        ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
+        : [])
+    ]
+  },
+  plugins: [
+    { plugin: require("craco-preact") },
+    {
+      plugin: CracoAntDesignPlugin,
+      options: {
+        customizeThemeLessPath: path.join(
+          __dirname,
+          "src/style/AntDesign/customTheme.less"
+        )
+      }
+    }
+  ]
 };
 ```
 
@@ -94,18 +131,17 @@ If you use multiple options to customize the theme variables, they are merged to
 
 > For more information, see Ant Design's ["Customize Theme" documentation](https://ant.design/docs/react/customize-theme).
 
-## Loader Options
+## Options
 
-You can pass some options to configure `style-loader`, `css-loader`, and `less-loader`:
+You can pass an `options` object to configure the loaders and plugins. You can also pass a `modifyLessRule` callback to have full control over the Less webpack rule.
+See the [`craco-less`](https://github.com/FormAPI/craco-less#configuration) documentation for more information about these options:
 
 - `options.styleLoaderOptions`
-  - [View the `style-loader` options](https://webpack.js.org/loaders/style-loader/#options)
 - `options.cssLoaderOptions`
-  - [View the `css-loader` options](https://webpack.js.org/loaders/css-loader/#options)
+- `options.postcssLoaderOptions`
 - `options.lessLoaderOptions`
-  - [View the `less-loader` documentation](https://webpack.js.org/loaders/less-loader/)
-  - [View the Less options](http://lesscss.org/usage/#less-options)
-    - You must use "camelCase" instead of "dash-case", e.g. `--source-map` => `sourceMap`
+- `options.miniCssExtractPluginOptions`
+- `options.modifyLessRule`
 
 Example:
 
