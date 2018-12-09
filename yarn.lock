@@ -2613,10 +2613,10 @@ coveralls@^3.0.2:
     minimist "^1.2.0"
     request "^2.85.0"
 
-craco-less@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.4.0.tgz#ff7db8b726faf7674da70eaf27468218167d9344"
-  integrity sha512-XikkOXv/xSxBgu6QucKTKv0/RRiH40HIZ1fTZthfCgOvPETiz2pxbFYggeBCLbnZ+G2uwQeRb3c33wjafgIzxQ==
+craco-less@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.5.0.tgz#175931ae752d746261a2d12297b86c40ad5d8b9d"
+  integrity sha512-IPTMMwVo4uv2SbYLKO4vV089QQgY1Oow9Mcp9i7S1zIfH2JakGCLFoBo9XE7D3i7+aGDVFvdl5vqeyxL2o4bWw==
   dependencies:
     "@craco/craco" "^3.2.0"
     css-loader "^1.0.1"
