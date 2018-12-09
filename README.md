@@ -50,9 +50,9 @@ module.exports = {
 };
 ```
 
-## Production-Ready Config
+## Advanced Usage
 
-Here is a `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
+Here is a production-ready `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
 
 I put my custom theme variables in `src/style/AntDesign/customTheme.less`. I also use that folder for some custom components and other CSS.
