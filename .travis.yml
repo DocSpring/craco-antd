@@ -14,4 +14,5 @@ cache:
     - node_modules
 
 script:
-  - jest --coverage --coverageReporters=text-lcov | coveralls
+  - jest --coverage
+  - cat ./coverage/lcov.info | coveralls
