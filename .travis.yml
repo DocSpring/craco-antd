@@ -1,7 +1,10 @@
 os:
-  # - windows
+  - windows
   - linux
   - osx
+
+env:
+  - YARN_GPG=no # Fixes build on Windows
 
 language: node_js
 
