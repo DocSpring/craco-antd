@@ -28,15 +28,17 @@ First, follow the beginning of the [Ant Design `create-react-app` Documentation]
 
 Then, follow the [`craco` Installation Instructions](https://github.com/sharegate/craco/blob/master/packages/craco/README.md##installation) to install the `craco` package, create a `craco.config.js` file, and modify the scripts in your `package.json`.
 
-Then install `craco-antd`:
+Then install `craco-antd` and `antd`:
 
 ```bash
-$ yarn add craco-antd
+$ yarn add craco-antd antd
 
 # OR
 
-$ npm i -S craco-antd
+$ npm i -S craco-antd antd
 ```
+
+> `craco-antd` only has a "peer dependency" for `antd >= 3.0.0`. You should add `antd` to your own `package.json` and use a fixed version (e.g. `3.11.2`). Be careful when upgrading `antd`, because unexpected changes could break your website.
 
 ## Basic Usage
 
