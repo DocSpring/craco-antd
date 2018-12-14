@@ -280,10 +280,12 @@ Before submitting a pull request, please check the following:
   - Run `yarn test`
 - 100% test coverage
   - Coverage will be printed after running tests.
-  - Open the coverage results in your browser: `$ open coverage/lcov-report/index.html`
+  - Check the coverage results in your browser: `open coverage/lcov-report/index.html`
+- No ESLint errors
+  - `yarn lint`
 - All code is formatted with [Prettier](https://prettier.io/)
-  - Run `prettier --write **/*.js`
-  - If you use VS Code, I recommend enabling the `formatOnSave` option.
+  - `yarn format`
+  - If you use VS Code, you should enable the `formatOnSave` option.
 
 ## License
 
