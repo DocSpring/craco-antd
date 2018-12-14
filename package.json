@@ -8,7 +8,7 @@
     "lint": "eslint --fix lib",
     "format": "prettier --write **/*.js",
     "update_deps": "node scripts/update_deps",
-    "puglish": "type jp2a >/dev/null 2>&1 || brew install jp2a; curl -s https://i.imgur.com/JTkE7Sk.jpg | jp2a -"
+    "puglish": "type jp2a >/dev/null 2>&1 || brew install jp2a; curl -s https://i.imgur.com/GuoVuX1.jpg | jp2a -"
   },
   "repository": {
     "type": "git",
