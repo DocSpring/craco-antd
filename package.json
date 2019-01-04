@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/FormAPI/craco-antd#readme",
   "devDependencies": {
-    "@craco/craco": "^3.2.2",
+    "@craco/craco": "^3.2.3",
     "react-scripts": "^2.1.1",
     "clone": "^2.1.2",
     "coveralls": "^3.0.2",
@@ -48,7 +48,7 @@
   },
   "peerDependencies": {
     "antd": ">= 3.0.0",
-    "@craco/craco": "^3.2.2",
+    "@craco/craco": "^3.2.3",
     "react-scripts": "^2.1.1"
   },
   "husky": {

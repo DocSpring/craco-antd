@@ -874,7 +874,7 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@craco/craco@^3.2.2":
+"@craco/craco@^3.2.3":
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-3.2.3.tgz#28e29e4bb7b0c02512e4c68fca524adb94e54e31"
   integrity sha512-p8Kmq8CbX1kIbhiv5elTunmgjYmSdI91kQtRHDN92R1YDIDrXbYiFf15PJOdjpN0nAnQdplZjEJwG/aXJ7Px8w==
