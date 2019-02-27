@@ -17,5 +17,5 @@ cache:
     - node_modules
 
 script:
-  - jest --coverage
+  - jest --coverage --testPathIgnorePatterns test-app
   - cat ./coverage/lcov.info | coveralls
