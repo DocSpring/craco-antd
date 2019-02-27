@@ -38,7 +38,6 @@ const rgb2hex = rgb => {
 
 describe("Test production app", () => {
   test("craco-antd sets the correct primary color and increments counter", async () => {
-    // TODO - Automate "yarn build" and "serve -s build"
     await page.goto("http://localhost:5123");
 
     await page.waitForSelector(".ant-layout-header");
