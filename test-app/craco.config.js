@@ -19,10 +19,14 @@ module.exports = {
     {
       plugin: CracoAntDesignPlugin,
       options: {
-        customizeThemeLessPath: path.join(
-          __dirname,
-          "src/style/customTheme.less"
-        )
+        customizeTheme: {
+          "@primary-color": "#8813bf",
+          "@layout-header-background": "#13bf77"
+        }
+        // customizeThemeLessPath: path.join(
+        //   __dirname,
+        //   "src/style/customTheme.less"
+        // )
       }
     }
   ]

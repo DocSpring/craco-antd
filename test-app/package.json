@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^3.3.1",
     "antd": "^3.13.6",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "@craco/craco": "^3.3.1"
+    "react-scripts": "2.1.5"
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
@@ -21,6 +21,8 @@
     "nodemon": "^1.18.7",
     "prettier": "https://github.com/ndbroadbent/prettier.git#add_close_empty_jsx_tags_option",
     "pretty-quick": "^1.8.0",
+    "puppeteer": "^1.12.2",
+    "serve-handler": "^5.0.8",
     "typescript": "^3.1.6",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpackbar": "^3.1.2"
@@ -28,6 +30,7 @@
   "scripts": {
     "start": "nodemon -w ./src/style/customTheme.less -w craco.config.js --exec 'craco start'",
     "build": "craco build",
+    "serve": "serve -s build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged"

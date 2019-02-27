@@ -308,6 +308,12 @@ Test the production build:
 
 ```
 yarn build
+
+# Install the "serve" package
+yarn global add serve
+
+# Serve the production build
+serve -s build
 ```
 
 ## License
