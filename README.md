@@ -287,6 +287,29 @@ Before submitting a pull request, please check the following:
   - `yarn format`
   - If you use VS Code, you should enable the `formatOnSave` option.
 
+## Test Application
+
+We've included a test React application in this repo, under `./test-app`.
+
+Install dependencies:
+
+```
+cd test-app
+yarn install
+```
+
+Test the app in development:
+
+```
+yarn start
+```
+
+Test the production build:
+
+```
+yarn build
+```
+
 ## License
 
 [MIT](./LICENSE)
