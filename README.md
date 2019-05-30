@@ -16,10 +16,11 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 ## Supported Versions
 
-`craco-antd` is tested with:
+The latest version of `craco-antd` is tested with:
 
-- `react-scripts`: `^2.1.1`
-- `@craco/craco`: `^2.4.0`
+- `react-scripts`: `^3.0.1`
+- `@craco/craco`: `^5.2.1`
+- `craco-less`: `^1.9.0`
 
 ## Installation
 
@@ -38,7 +39,7 @@ $ yarn add craco-antd antd
 $ npm i -S craco-antd antd
 ```
 
-> `craco-antd` only has a "peer dependency" for `antd >= 3.0.0`. You should add `antd` to your own `package.json` and use a fixed version (e.g. `3.11.2`). Be careful when upgrading `antd`, because unexpected changes could break your website.
+> `craco-antd` only has a "peer dependency" for `antd >= 3.0.0`. You should add `antd` to your own `package.json` and use a fixed version (e.g. `3.11.2`). Be careful when upgrading `antd`, because unexpected changes could break your application.
 
 ## Basic Usage
 
