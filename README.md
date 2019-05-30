@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/FormAPI/craco-antd.svg?branch=master)](https://travis-ci.org/FormAPI/craco-antd)
+[![Build Status](https://travis-ci.org/DocSpring/craco-antd.svg?branch=master)](https://travis-ci.org/DocSpring/craco-antd)
 [![Coverage Status](https://coveralls.io/repos/github/FormAPI/craco-antd/badge.svg?branch=master)](https://coveralls.io/github/FormAPI/craco-antd?branch=master)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
