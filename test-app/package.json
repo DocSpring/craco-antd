@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^3.3.1",
+    "@craco/craco": "^5.2.1",
     "antd": "^3.13.6",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
