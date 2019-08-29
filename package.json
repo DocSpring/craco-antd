@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/FormAPI/craco-antd.git"
+    "url": "git+ssh://git@github.com/DocSpring/craco-antd.git"
   },
   "keywords": [
     "craco",
@@ -22,12 +22,12 @@
     "UI library",
     "UI components"
   ],
-  "author": "Nathan Broadbent <nathan@formapi.io>",
+  "author": "Nathan Broadbent <nathan@docspring.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FormAPI/craco-antd/issues"
+    "url": "https://github.com/DocSpring/craco-antd/issues"
   },
-  "homepage": "https://github.com/FormAPI/craco-antd#readme",
+  "homepage": "https://github.com/DocSpring/craco-antd#readme",
   "devDependencies": {
     "@craco/craco": "^5.2.1",
     "clone": "^2.1.2",
