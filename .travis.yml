@@ -18,4 +18,5 @@ cache:
 
 script:
   - jest --coverage --testPathIgnorePatterns test-app
+  - yarn audit
   - cat ./coverage/lcov.info | coveralls
