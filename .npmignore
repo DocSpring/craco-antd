@@ -1,3 +1,15 @@
 node_modules/
 npm-debug.log
-*.test.js
+lib/*.test.js
+.eslintrc
+.prettierrc
+.travis.yml
+jest.config.js
+yarn-error.log
+craco-antd-*.tgz
+.vscode
+yarn.lock
+coverage
+scripts/
+test-app/
+img/

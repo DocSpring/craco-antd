@@ -317,6 +317,14 @@ yarn global add serve
 serve -s build
 ```
 
+## Releasing a new version
+
+- Check which files will be included in the NPM package:
+  - `npm pack`
+  - Update `.npmignore` to exclude any files.
+- Release new version to NPM:
+  - `npm publish`
+
 ## License
 
 [MIT](./LICENSE)
