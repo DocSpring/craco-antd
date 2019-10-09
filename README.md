@@ -18,9 +18,9 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 The latest version of `craco-antd` is tested with:
 
-- `react-scripts`: `^3.0.1`
-- `@craco/craco`: `^5.2.1`
-- `craco-less`: `^1.9.0`
+- `react-scripts`: `^3.2.0`
+- `@craco/craco`: `^5.5.0`
+- `craco-less`: `^1.14.4`
 
 ## Installation
 
@@ -319,6 +319,7 @@ serve -s build
 
 ## Releasing a new version
 
+- Make sure the "Supported Versions" section is updated at the top of the README.
 - Check which files will be included in the NPM package:
   - `npm pack`
   - Update `.npmignore` to exclude any files.
