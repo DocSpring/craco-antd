@@ -1013,7 +1013,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@craco/craco@^5.3.0":
+"@craco/craco@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-5.5.0.tgz#081b25522d866fbc14b80fe61517f2f10e3e4499"
   integrity sha512-VN4pkBku4OmB8DHT/COGfmk4DKIyBDqM8KeGX6jGqsqxhxIf8OI1ULKNtenwvdKTx3XrYMEr0ya4n3VBu8CXew==
@@ -3084,10 +3084,10 @@ coveralls@^3.0.2:
     minimist "^1.2.0"
     request "^2.86.0"
 
-craco-less@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.13.0.tgz#b9eec29ca17dfa0bc31fe08338b76ca9affe24bc"
-  integrity sha512-uGs9xPXv0zL+BL+hB1S3LvWi6y41pU1pPYEekiu4mWBhzZiEdbdpuAyFkWDtUVuZdd/DAo/eTyRA4MA1tjFfnw==
+craco-less@^1.14.1:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.14.1.tgz#0fbfa7e8f67149662e9f8cff5a3a8536243b3542"
+  integrity sha512-6S/AuEO8J9ZI0MSnA0v/snEk1hX3StSBX6bulSuX6RKcMu5N82Xnj+ZGGp0RuInxP6PqXsUr8IdnQ7IUqs8Zkg==
   dependencies:
     less "3.10.3"
     less-loader "^5.0.0"
@@ -8959,7 +8959,7 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
-react-scripts@^3.1.1:
+react-scripts@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.2.0.tgz#58ccd6b4ffa27f1b4d2986cbdcaa916660e9e33c"
   integrity sha512-6LzuKbE2B4eFQG6i1FnTScn9HDcWBfXXnOwW9xKFPJ/E3rK8i1ufbOZ0ocKyRPxJAKdN7iqg3i7lt0+oxkSVOA==
