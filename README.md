@@ -159,7 +159,7 @@ Update the "start" script in `package.json`:
 
 ```json
 "scripts": {
-  "start": "nodemon -w ./antd.customize.less --exec 'craco start'",
+  "start": "nodemon -w ./antd.customize.less --exec \"craco start\"",
 }
 ```
 
@@ -173,7 +173,7 @@ While you're here, you can also add `-w craco.config.js` to restart webpack when
 
 ```json
 "scripts": {
-  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec 'craco start'",
+  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec \"craco start\"",
 }
 ```
 
