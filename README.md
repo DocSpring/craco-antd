@@ -2,6 +2,14 @@
 [![Coverage Status](https://coveralls.io/repos/github/DocSpring/craco-antd/badge.svg?branch=master)](https://coveralls.io/github/DocSpring/craco-antd?branch=master)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+--------
+
+### Not actively maintained
+
+Please help us keep this project up to date by sending a PR!
+
+--------
+
 # Craco Ant Design Plugin
 
 This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy to use the [Ant Design](https://ant.design/) UI library with [create-react-app](https://facebook.github.io/create-react-app/) version >= 2.
