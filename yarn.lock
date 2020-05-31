@@ -2883,14 +2883,13 @@ coveralls@^3.0.2:
     minimist "^1.2.0"
     request "^2.86.0"
 
-craco-less@^1.14.4:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.14.4.tgz#e18444fb851c6df27b202821f2096fef792b7762"
-  integrity sha512-+lXe5gO3bNPIbikgTZhcWPhrMzzZEkxkx+bI2NB3i4ce88Izl58oC95CDiRwXphZERCEMm1T1nWkBNPFepc6pg==
+craco-less@~1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.16.0.tgz#016d31dfbf9db22f6dfc41ddeadd5b7d35c1fc6c"
+  integrity sha512-9YAkHFb0i4h6+jLOahMgNQ6uEypQ9Y2IONb0DpOTYHmT2j9aOs8El7kCE+O5fHv9iUZnhNYBLW0qkdIrBHxBeg==
   dependencies:
     less "3.10.3"
     less-loader "^5.0.0"
-    webpack "4.41.0"
 
 create-ecdh@^4.0.0:
   version "4.0.3"
