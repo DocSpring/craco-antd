@@ -50,7 +50,7 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 `craco-antd` includes:
 
-- Less (provided by [craco-less](https://github.com/FormAPI/craco-less))
+- Less (provided by [craco-less](https://github.com/DocSpring/craco-less))
 - `babel-plugin-import` to only import the required CSS, instead of everything
 - An easy way to customize the theme. Set your custom variables in `./antd.customize.less`
 
@@ -96,7 +96,7 @@ module.exports = {
 ## Advanced Usage
 
 Here is a production-ready `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
-It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
+It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/DocSpring/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
 
 I put my custom theme variables in `src/style/AntDesign/customTheme.less`. I also use that folder for some custom components and other CSS.
 
@@ -237,7 +237,7 @@ process.env.BROWSER = "none";
 ## Options
 
 You can pass an `options` object to configure the loaders and plugins. You can also pass a `modifyLessRule` callback to have full control over the Less webpack rule.
-See the [`craco-less`](https://github.com/FormAPI/craco-less#configuration) documentation for more information about these options:
+See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) documentation for more information about these options:
 
 - `options.styleLoaderOptions`
 - `options.cssLoaderOptions`
@@ -286,7 +286,7 @@ module.exports = {
 
 If you have imported any icons from Ant Design, you will see a very large (> 500KB) entry for `@ant-design/icons/lib`:
 
-<img src="https://github.com/FormAPI/craco-antd/raw/master/img/large-ant-design-icons-lib.png" alt="Ant Design Large Icons" width="500">
+<img src="https://github.com/DocSpring/craco-antd/raw/master/img/large-ant-design-icons-lib.png" alt="Ant Design Large Icons" width="500">
 
 This is a problem with Ant Design `v3.9.0+`, and it will be fixed in the next version. See [this GitHub issue](https://github.com/ant-design/ant-design/issues/12011) for more information. [This comment](https://github.com/ant-design/ant-design/issues/12011#issuecomment-433775872) talks about the fix, and here is [the PR](https://github.com/ant-design/ant-design/pull/12888).
 
