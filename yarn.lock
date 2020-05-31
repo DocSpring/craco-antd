@@ -3200,7 +3200,7 @@ coveralls@^3.0.2:
     minimist "^1.2.5"
     request "^2.88.2"
 
-craco-less@^1.16.0:
+craco-less@^1.17.0:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/craco-less/-/craco-less-1.17.0.tgz#3d92e59966e1fdecef4d173b2389985a75cb6bb9"
   integrity sha512-G+GPEKPPKiSvYDsnQWuj1C4CIuaY8w+iHvULHkNf5QWLE0LkPfSRf3frhRDJjFxtkThpLPSLjWndD9kx8bCWzw==
