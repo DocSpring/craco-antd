@@ -8,7 +8,7 @@
 
 We rely on your help to keep this project up to date and work with the latest versions of `craco` and `react-scripts`.
 
-Before you send a PR, please ensure that your changes have:
+Before you send a PR, please check the following:
 
 - 100% test coverage
 
