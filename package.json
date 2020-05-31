@@ -65,5 +65,8 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "resolutions": {
+    "react-scripts/webpack-dev-server": ">=3.11.0"
   }
 }
