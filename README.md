@@ -372,11 +372,11 @@ serve -s build
 
 ## Contributors
 
-- @ndbroadbent
-- @cemremengu
-- @patricklafrance
-- @kovyazin
-- @Vovan-VE
-- @pybuche
-- @aitsvet
-- @daniel-hauser
+- [ndbroadbent](https://github.com/ndbroadbent)
+- [cemremengu](https://github.com/cemremengu)
+- [patricklafrance](https://github.com/patricklafrance)
+- [kovyazin](https://github.com/kovyazin)
+- [Vovan-VE](https://github.com/Vovan-VE)
+- [pybuche](https://github.com/pybuche)
+- [aitsvet](https://github.com/aitsvet)
+- [daniel-hauser](https://github.com/daniel-hauser)
