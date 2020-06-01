@@ -378,3 +378,5 @@ serve -s build
 - @kovyazin
 - @Vovan-VE
 - @pybuche
+- @aitsvet
+- @daniel-hauser
