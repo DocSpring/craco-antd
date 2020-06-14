@@ -2,6 +2,46 @@
 [![Coverage Status](https://coveralls.io/repos/github/DocSpring/craco-antd/badge.svg?branch=master)](https://coveralls.io/github/DocSpring/craco-antd?branch=master)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+---
+
+### Community Maintained
+
+We rely on your help to keep this project up to date and work with the latest versions of `craco` and `react-scripts`.
+
+Before you send a PR, please check the following:
+
+- 100% test coverage
+
+```
+jest --coverage --testPathIgnorePatterns test-app
+```
+
+- Code is formatted with Prettier
+
+```
+yarn prettier --write "**/*.{js,jsx,json,css,scss,html,md,yml}"
+```
+
+- No ESLint warnings
+
+```
+yarn eslint --fix --ext .js lib/
+```
+
+- No security vulnerabilities in any NPM packages
+
+```
+yarn audit
+```
+
+You are also welcome to add your GitHub username to the [Contributors](#Contributors) section at the bottom of this README. (_optional_)
+
+### Please don't send a pull request if it does not meet the above requirements
+
+Pull requests will be ignored and closed if there is a failing build on Travis CI.
+
+---
+
 # Craco Ant Design Plugin
 
 This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy to use the [Ant Design](https://ant.design/) UI library with [create-react-app](https://facebook.github.io/create-react-app/) version >= 2.
@@ -10,7 +50,7 @@ This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy 
 
 `craco-antd` includes:
 
-- Less (provided by [craco-less](https://github.com/FormAPI/craco-less))
+- Less (provided by [craco-less](https://github.com/DocSpring/craco-less))
 - `babel-plugin-import` to only import the required CSS, instead of everything
 - An easy way to customize the theme. Set your custom variables in `./antd.customize.less`
 
@@ -56,7 +96,7 @@ module.exports = {
 ## Advanced Usage
 
 Here is a production-ready `craco.config.js` file that sets up [`webpackbar`](https://github.com/nuxt/webpackbar) and [`webpack-bundle-analyzer`](https://github.com/webpack-contrib/webpack-bundle-analyzer).
-It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/FormAPI/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
+It also sets up [Preact](https://preactjs.com/) with the [`craco-preact`](https://github.com/DocSpring/craco-preact) plugin. (Preact is faster and smaller than React, and it works fine with Ant Design.)
 
 I put my custom theme variables in `src/style/AntDesign/customTheme.less`. I also use that folder for some custom components and other CSS.
 
@@ -159,7 +199,7 @@ Update the "start" script in `package.json`:
 
 ```json
 "scripts": {
-  "start": "nodemon -w ./antd.customize.less --exec 'craco start'",
+  "start": "nodemon -w ./antd.customize.less --exec \"craco start\"",
 }
 ```
 
@@ -173,7 +213,7 @@ While you're here, you can also add `-w craco.config.js` to restart webpack when
 
 ```json
 "scripts": {
-  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec 'craco start'",
+  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec \"craco start\"",
 }
 ```
 
@@ -197,7 +237,7 @@ process.env.BROWSER = "none";
 ## Options
 
 You can pass an `options` object to configure the loaders and plugins. You can also pass a `modifyLessRule` callback to have full control over the Less webpack rule.
-See the [`craco-less`](https://github.com/FormAPI/craco-less#configuration) documentation for more information about these options:
+See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) documentation for more information about these options:
 
 - `options.styleLoaderOptions`
 - `options.cssLoaderOptions`
@@ -246,7 +286,7 @@ module.exports = {
 
 If you have imported any icons from Ant Design, you will see a very large (> 500KB) entry for `@ant-design/icons/lib`:
 
-<img src="https://github.com/FormAPI/craco-antd/raw/master/img/large-ant-design-icons-lib.png" alt="Ant Design Large Icons" width="500">
+<img src="https://github.com/DocSpring/craco-antd/raw/master/img/large-ant-design-icons-lib.png" alt="Ant Design Large Icons" width="500">
 
 This is a problem with Ant Design `v3.9.0+`, and it will be fixed in the next version. See [this GitHub issue](https://github.com/ant-design/ant-design/issues/12011) for more information. [This comment](https://github.com/ant-design/ant-design/issues/12011#issuecomment-433775872) talks about the fix, and here is [the PR](https://github.com/ant-design/ant-design/pull/12888).
 
@@ -329,3 +369,14 @@ serve -s build
 ## License
 
 [MIT](./LICENSE)
+
+## Contributors
+
+- [ndbroadbent](https://github.com/ndbroadbent)
+- [cemremengu](https://github.com/cemremengu)
+- [patricklafrance](https://github.com/patricklafrance)
+- [kovyazin](https://github.com/kovyazin)
+- [Vovan-VE](https://github.com/Vovan-VE)
+- [pybuche](https://github.com/pybuche)
+- [aitsvet](https://github.com/aitsvet)
+- [daniel-hauser](https://github.com/daniel-hauser)
