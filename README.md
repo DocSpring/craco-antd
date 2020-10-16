@@ -246,6 +246,10 @@ See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) do
 - `options.miniCssExtractPluginOptions`
 - `options.modifyLessRule`
 
+See the [`babel-plugin-import`](https://github.com/ant-design/babel-plugin-import#options) documentation for more information about this option:
+
+- `options.babelPluginImportOptions`
+
 Example:
 
 ```js
@@ -262,6 +266,9 @@ module.exports = {
         cssLoaderOptions: {
           modules: true,
           localIdentName: "[local]_[hash:base64:5]"
+        },
+        babelPluginImportOptions: {
+          libraryDirectory: "es"
         }
       }
     }
