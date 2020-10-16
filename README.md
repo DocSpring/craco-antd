@@ -268,7 +268,7 @@ module.exports = {
           localIdentName: "[local]_[hash:base64:5]"
         },
         babelPluginImportOptions: {
-          libraryName: "es"
+          libraryDirectory: "es"
         }
       }
     }
