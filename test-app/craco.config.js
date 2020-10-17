@@ -12,8 +12,8 @@ module.exports = {
       new WebpackBar({ profile: true }),
       ...(process.env.NODE_ENV === "development"
         ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
-        : [])
-    ]
+        : []),
+    ],
   },
   plugins: [
     {
@@ -21,13 +21,13 @@ module.exports = {
       options: {
         customizeTheme: {
           "@primary-color": "#8813bf",
-          "@layout-header-background": "#13bf77"
-        }
+          "@layout-header-background": "#13bf77",
+        },
         // customizeThemeLessPath: path.join(
         //   __dirname,
         //   "src/style/customTheme.less"
         // )
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

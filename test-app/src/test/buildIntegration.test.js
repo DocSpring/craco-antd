@@ -14,7 +14,7 @@ beforeAll(async () => {
 
   server = http.createServer((request, response) => {
     return serveHandler(request, response, {
-      public: path.join(__dirname, "../../build")
+      public: path.join(__dirname, "../../build"),
     });
   });
   server.listen(5123, () => {
@@ -22,13 +22,13 @@ beforeAll(async () => {
   });
 
   browser = await puppeteer.launch({
-    headless: true
+    headless: true,
   });
   page = await browser.newPage();
 });
 
 // https://stackoverflow.com/a/3627747/304706
-const rgb2hex = rgb => {
+const rgb2hex = (rgb) => {
   rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   function hex(x) {
     return ("0" + parseInt(x).toString(16)).slice(-2);
@@ -59,7 +59,7 @@ describe("Test production app", () => {
 
     let alertText = await page.$eval(
       ".ant-alert .ant-alert-message",
-      el => el.textContent
+      (el) => el.textContent
     );
     expect(alertText).toEqual("Counter: 0");
 
@@ -67,7 +67,7 @@ describe("Test production app", () => {
 
     alertText = await page.$eval(
       ".ant-alert .ant-alert-message",
-      el => el.textContent
+      (el) => el.textContent
     );
     expect(alertText).toEqual("Counter: 1");
   }, 16000);

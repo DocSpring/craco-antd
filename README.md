@@ -89,7 +89,7 @@ Here is a complete `craco.config.js` configuration file that sets up Less compil
 const CracoAntDesignPlugin = require("craco-antd");
 
 module.exports = {
-  plugins: [{ plugin: CracoAntDesignPlugin }]
+  plugins: [{ plugin: CracoAntDesignPlugin }],
 };
 ```
 
@@ -115,8 +115,8 @@ module.exports = {
       new WebpackBar({ profile: true }),
       ...(process.env.NODE_ENV === "development"
         ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
-        : [])
-    ]
+        : []),
+    ],
   },
   plugins: [
     { plugin: require("craco-preact") },
@@ -126,10 +126,10 @@ module.exports = {
         customizeThemeLessPath: path.join(
           __dirname,
           "src/style/AntDesign/customTheme.less"
-        )
-      }
-    }
-  ]
+        ),
+      },
+    },
+  ],
 };
 ```
 
@@ -161,11 +161,11 @@ module.exports = {
       options: {
         customizeTheme: {
           "@primary-color": "#1DA57A",
-          "@link-color": "#1DA57A"
-        }
-      }
-    }
-  ]
+          "@link-color": "#1DA57A",
+        },
+      },
+    },
+  ],
 };
 ```
 
@@ -261,18 +261,18 @@ module.exports = {
         lessLoaderOptions: {
           modifyVars: { "@primary-color": "#1DA57A" },
           strictMath: true,
-          noIeCompat: true
+          noIeCompat: true,
         },
         cssLoaderOptions: {
           modules: true,
-          localIdentName: "[local]_[hash:base64:5]"
+          localIdentName: "[local]_[hash:base64:5]",
         },
         babelPluginImportOptions: {
-          libraryDirectory: "es"
-        }
-      }
-    }
-  ]
+          libraryDirectory: "es",
+        },
+      },
+    },
+  ],
 };
 ```
 
@@ -285,9 +285,9 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 module.exports = {
   webpack: {
-    plugins: [new BundleAnalyzerPlugin()]
+    plugins: [new BundleAnalyzerPlugin()],
   },
-  plugins: [{ plugin: require("craco-antd") }]
+  plugins: [{ plugin: require("craco-antd") }],
 };
 ```
 
