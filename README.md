@@ -45,6 +45,7 @@ Pull requests will be ignored and closed if there is a failing build on Travis C
 # Craco Ant Design Plugin
 
 This is a [craco](https://github.com/sharegate/craco) plugin that makes it easy to use the [Ant Design](https://ant.design/) UI library with [create-react-app](https://facebook.github.io/create-react-app/) version >= 2.
+[Ant Design Mobile](https://mobile.ant.design/) is also supported.
 
 > Use [react-app-rewired](https://github.com/timarney/react-app-rewired) for `create-react-app` version 1.
 
@@ -90,6 +91,23 @@ const CracoAntDesignPlugin = require("craco-antd");
 
 module.exports = {
   plugins: [{ plugin: CracoAntDesignPlugin }],
+};
+```
+
+If you would like to enable `antd-mobile` support, add `options` object with `mobile` property set to `true`
+
+```js
+const CracoAntDesignPlugin = require("craco-antd");
+
+module.exports = {
+  plugins: [
+    {
+      plugin: CracoAntDesignPlugin,
+      options: {
+        mobile: true,
+      },
+    },
+  ],
 };
 ```
 
@@ -249,6 +267,7 @@ See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) do
 See the [`babel-plugin-import`](https://github.com/ant-design/babel-plugin-import#options) documentation for more information about this option:
 
 - `options.babelPluginImportOptions`
+- `options.babelPluginImportOptionsMobile` - `babel-plugin-import` options for ant-mobile
 
 Example:
 
@@ -258,6 +277,7 @@ module.exports = {
     {
       plugin: CracoAntDesignPlugin,
       options: {
+        mobile: true,
         lessLoaderOptions: {
           modifyVars: { "@primary-color": "#1DA57A" },
           strictMath: true,
@@ -268,6 +288,9 @@ module.exports = {
           localIdentName: "[local]_[hash:base64:5]",
         },
         babelPluginImportOptions: {
+          libraryDirectory: "es",
+        },
+        babelPluginImportOptionsMobile: {
           libraryDirectory: "es",
         },
       },
