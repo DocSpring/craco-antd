@@ -15,7 +15,7 @@ class App extends Component<any, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
     };
   }
 

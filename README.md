@@ -13,19 +13,19 @@ Before you send a PR, please check the following:
 - 100% test coverage
 
 ```
-jest --coverage --testPathIgnorePatterns test-app
+yarn test
 ```
 
 - Code is formatted with Prettier
 
 ```
-yarn prettier --write "**/*.{js,jsx,json,css,scss,html,md,yml}"
+yarn format
 ```
 
 - No ESLint warnings
 
 ```
-yarn eslint --fix --ext .js lib/
+yarn lint
 ```
 
 - No security vulnerabilities in any NPM packages

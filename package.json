@@ -4,11 +4,12 @@
   "description": "A craco plugin to use Ant Design with create-react-app ",
   "main": "lib/craco-antd.js",
   "scripts": {
-    "test": "jest --testPathIgnorePatterns test-app",
-    "lint": "eslint --fix lib",
-    "format": "prettier --write **/*.js",
+    "test": "jest --coverage --testPathIgnorePatterns test-app",
+    "lint": "eslint --fix --ignore-pattern test-app \"**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,yml,css,scss,less,md}\"",
     "update_deps": "node scripts/update_deps",
-    "puglish": "type jp2a >/dev/null 2>&1 || brew install jp2a; curl -s https://i.imgur.com/GuoVuX1.jpg | jp2a -"
+    "puglish": "type jp2a >/dev/null 2>&1 || brew install jp2a; curl -s https://i.imgur.com/GuoVuX1.jpg | jp2a -",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -32,12 +33,12 @@
     "@craco/craco": "^5.7.0",
     "clone": "^2.1.2",
     "coveralls": "^3.1.0",
-    "eslint": "7.11.0",
+    "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
+    "husky": "^7.0.2",
     "jest": "^26.5.3",
-    "lint-staged": "^10.4.1",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.1.2",
     "react-scripts": "^3.4.3"
   },
@@ -51,19 +52,12 @@
     "antd": ">= 3.0.0",
     "react-scripts": "^3.4.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": [
-      "yarn prettier --write",
-      "git add"
+    "**/*.{js,jsx,ts,tsx,json,yml,css,scss,less,md}": [
+      "prettier --write"
     ],
-    "*.{js,jsx,ts,tsx}": [
-      "yarn eslint --fix lib",
-      "git add"
+    "{!(test-app)/**/*,*}.{js,jsx,ts,tsx}": [
+      "eslint --fix"
     ]
   },
   "resolutions": {
