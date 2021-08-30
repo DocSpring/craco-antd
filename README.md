@@ -236,7 +236,7 @@ process.env.BROWSER = "none";
 
 ## Options
 
-You can pass an `options` object to configure the loaders and plugins. You can also pass a `modifyLessRule` callback to have full control over the Less webpack rule.
+You can pass an `options` object to configure the loaders and plugins. You can also pass a `modifyLessRule`(or `modifyLessModuleRule`) callback to have full control over the Less webpack rule.
 See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) documentation for more information about these options:
 
 - `options.styleLoaderOptions`
@@ -245,6 +245,7 @@ See the [`craco-less`](https://github.com/DocSpring/craco-less#configuration) do
 - `options.lessLoaderOptions`
 - `options.miniCssExtractPluginOptions`
 - `options.modifyLessRule`
+- `options.modifyLessModuleRule`
 
 See the [`babel-plugin-import`](https://github.com/ant-design/babel-plugin-import#options) documentation for more information about this option:
 
