@@ -387,3 +387,4 @@ serve -s build
 - [pybuche](https://github.com/pybuche)
 - [aitsvet](https://github.com/aitsvet)
 - [daniel-hauser](https://github.com/daniel-hauser)
+- [kamronbatman](https://github.com/kamronbatman)
