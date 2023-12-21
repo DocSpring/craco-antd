@@ -59,7 +59,7 @@ describe("Test production app", () => {
 
     let alertText = await page.$eval(
       ".ant-alert .ant-alert-message",
-      (el) => el.textContent
+      (el) => el.textContent,
     );
     expect(alertText).toEqual("Counter: 0");
 
@@ -67,7 +67,7 @@ describe("Test production app", () => {
 
     alertText = await page.$eval(
       ".ant-alert .ant-alert-message",
-      (el) => el.textContent
+      (el) => el.textContent,
     );
     expect(alertText).toEqual("Counter: 1");
   }, 16000);
