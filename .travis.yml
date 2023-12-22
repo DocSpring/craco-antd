@@ -18,6 +18,7 @@ cache:
 
 script:
   - jest --coverage --testPathIgnorePatterns test-app
+  - cd test-app && yarn test && cd ..
   - yarn prettier --check "**/*.{js,jsx,json,css,scss,html,md,yml}"
   - yarn eslint --ext .js lib/
   - yarn audit
