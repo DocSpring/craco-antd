@@ -10,7 +10,6 @@
 .DS_Store
 coverage
 .idea
-package-lock.json
 /test-results
 test-app/node_modules
 craco-antd-*.tgz
