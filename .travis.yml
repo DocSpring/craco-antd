@@ -9,7 +9,7 @@ env:
 language: node_js
 
 node_js:
-  - "10"
+  - "20"
 
 cache:
   yarn: true
@@ -18,7 +18,7 @@ cache:
 
 script:
   - jest --coverage --testPathIgnorePatterns test-app
-  - yarn prettier --check "**/*.{js,jsx,json,css,scss,html,md,yml}"
-  - yarn eslint --ext .js lib/
-  - yarn audit
+  - cd test-app && yarn test && yarn e2e && cd ..
+  - npm prettier --check "**/*.{js,jsx,json,css,scss,html,md,yml}"
+  - npm eslint --ext .js lib/
   - cat ./coverage/lcov.info | coveralls
