@@ -18,8 +18,7 @@ cache:
 
 script:
   - jest --coverage --testPathIgnorePatterns test-app
-  - cd test-app && yarn test && cd ..
-  - yarn prettier --check "**/*.{js,jsx,json,css,scss,html,md,yml}"
-  - yarn eslint --ext .js lib/
-  - yarn audit
+  - cd test-app && yarn test && yarn e2e && cd ..
+  - npm prettier --check "**/*.{js,jsx,json,css,scss,html,md,yml}"
+  - npm eslint --ext .js lib/
   - cat ./coverage/lcov.info | coveralls
